@@ -49,6 +49,8 @@ Reemplaza o elimina cada placeholder. No dejes placeholders como texto final en 
 ## 4. Completar el proyecto
 
 - Ajusta `AGENTS.md`: stack, comandos y puertas de aprobación.
+- Si adoptas trunk-based en lugar de ramas locales, ajusta `AGENTS.md` §5; el resto del flujo no
+  cambia.
 - Ajusta `README.md`, `docs/PROJECT_CONTEXT.md` y `docs/ROADMAP.md`.
 - Define qué datos son sensibles y dónde viven fuera de Git.
 - Borra las filas de comandos que no apliquen.

@@ -87,7 +87,10 @@ build; respetar el modo declarado.
    y explicar; no improvisar arquitectura.
 3. **Verificar:** ejecutar la verificación de la tarea y registrar el resultado real. Revisar el diff
    en modo lectura y distinguir defectos confirmados de sospechas. Si el cambio es delicado,
-   verificar en una sesión aparte.
+   verificar en una sesión aparte. La verificación es por entorno: lo validado en un sistema
+   operativo no se presume validado en otro, y las comparaciones binarias o raster se hacen contra una
+   referencia del mismo entorno. Si hace falta un entorno que no está disponible, se registra como
+   pendiente manual con su alcance y no se marca como hecho.
 4. **Handoff:** reescribir `HANDOFF.md` con estado, verificación real, siguiente acción única y prompt
    de continuación. La siguiente acción es una unidad ejecutable, no una fecha: las obligaciones con
    fecha viven en «Deudas con fecha». El prompt referencia el handoff y no duplica su estado.
