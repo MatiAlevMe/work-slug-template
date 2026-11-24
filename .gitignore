@@ -1,0 +1,22 @@
+# Sistema y editor
+.DS_Store
+Thumbs.db
+*.swp
+
+# Secretos
+.env
+.env.*
+credentials/
+secrets/
+
+# Scratch local
+docs/tmp/
+
+# Dependencias y artefactos
+node_modules/
+vendor/
+dist/
+build/
+coverage/
+
+# Ajusta esta lista al stack del proyecto.
