@@ -43,6 +43,8 @@ git config --local --get user.email
 | `<BRANCH>` | Rama de trabajo. |
 | `<NEXT_ACTION>` | Siguiente unidad de trabajo. |
 | `<FEATURE_ID>` | Identificador de un requirement. |
+| `<LIMIT>` | Límite operativo o criterio de un riesgo aceptado. |
+| `<REASON>` | Motivo para diferir una idea. |
 
 Reemplaza o elimina cada placeholder. No dejes placeholders como texto final en el proyecto adaptado.
 
@@ -54,6 +56,8 @@ Reemplaza o elimina cada placeholder. No dejes placeholders como texto final en 
 - Ajusta `README.md`, `docs/PROJECT_CONTEXT.md` y `docs/ROADMAP.md`.
 - Define qué datos son sensibles y dónde viven fuera de Git.
 - Borra las filas de comandos que no apliquen.
+- Usa `BACKLOG.md` solo si acumulas deuda o riesgos aceptados; si no, borra el archivo. Si lo usas,
+  reemplaza o elimina las filas de ejemplo y los placeholders `<LIMIT>` y `<REASON>`.
 
 ## 5. Elegir módulos opcionales
 
@@ -79,6 +83,8 @@ Cada README explica cuándo usarlo y cómo borrarlo. El núcleo no depende de el
 - [ ] Las tablas Markdown son consistentes.
 - [ ] No hay datos personales, secretos ni rutas absolutas.
 - [ ] `AGENTS.md` es la única fuente de instrucciones.
+- [ ] Los documentos evergreen no enlazan rutas concretas de `work/<slug>/` ni `archive/`.
+- [ ] `BACKLOG.md` está borrado o sin placeholders ni filas de ejemplo.
 - [ ] La identidad local está configurada y la global no cambió.
 - [ ] El repositorio no tiene remotos heredados.
 

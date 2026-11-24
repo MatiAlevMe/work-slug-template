@@ -8,6 +8,7 @@ no incluye código de aplicación, dependencias, CI ni datos privados.
 - `AGENTS.md` como única fuente de instrucciones.
 - Documentos base evergreen: `README.md`, `docs/PROJECT_CONTEXT.md`, `docs/ROADMAP.md` y
   `docs/README.md`.
+- `BACKLOG.md` opcional para deuda, riesgos aceptados e ideas diferidas.
 - Unidad de trabajo `docs/work/<slug>/` con `PLAN.md` estable y `HANDOFF.md` reescrito cada sesión.
 - Plantillas de PLAN, HANDOFF, SESSION-START y REQ.
 - `docs/plans/` para especificaciones aprobadas y `docs/archive/` para trabajo congelado.
@@ -28,6 +29,7 @@ no incluye código de aplicación, dependencias, CI ni datos privados.
 .
 ├── ADOPTING.md
 ├── AGENTS.md
+├── BACKLOG.md
 ├── CHANGELOG.md
 ├── LICENSE
 ├── README.md
@@ -50,6 +52,8 @@ no incluye código de aplicación, dependencias, CI ni datos privados.
 - La documentación versionada es la fuente de verdad; el chat no es estado.
 - `AGENTS.md` manda; los demás documentos apuntan a él.
 - Evergreen, vivo, estable, estado, histórico y congelado no se mezclan.
+- Solo `docs/README.md` conoce rutas concretas de `work/<slug>/` y `archive/`; los evergreen no las
+  repiten.
 - Cada tarea tiene un slug con plan estable y handoff reescrito.
 - Se distingue lo verificado de lo asumido.
 - Publicar, reescribir historial o tocar repos externos requiere autorización.
@@ -61,6 +65,7 @@ no incluye código de aplicación, dependencias, CI ni datos privados.
 - [`docs/PROJECT_CONTEXT.md`](docs/PROJECT_CONTEXT.md): contexto y decisiones estables.
 - [`docs/ROADMAP.md`](docs/ROADMAP.md): fases y criterios de cierre.
 - [`CHANGELOG.md`](CHANGELOG.md): cambios publicados o pendientes.
+- [`BACKLOG.md`](BACKLOG.md): deuda y riesgos aceptados (opcional).
 - [`ADOPTING.md`](ADOPTING.md): adaptación de la plantilla.
 
 ## Licencia

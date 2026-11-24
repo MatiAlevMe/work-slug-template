@@ -42,6 +42,7 @@ Borrar las filas que no apliquen. Si un comando no existe, no inventarlo.
 
 ```text
 AGENTS.md              reglas para agentes
+BACKLOG.md             deuda y riesgos aceptados (opcional)
 CHANGELOG.md           cambios publicados o pendientes
 README.md              entrada humana
 docs/
@@ -69,6 +70,10 @@ Reglas:
 7. Los hallazgos van al `PLAN.md` del slug; si no cambian alcance, criterio o riesgo, no se
    archivan.
 8. El `CHANGELOG.md` registra cambios publicados, no trabajo en curso.
+9. Los documentos evergreen enlazan solo rutas estables. Las rutas concretas de `work/<slug>/` y
+   `archive/` viven solo en `docs/README.md`; un evergreen no las repite.
+10. La deuda que sobrevive a un slug se registra en `BACKLOG.md` con responsable, fecha de revisión y
+    criterio de cierre.
 
 El detalle está en `docs/README.md`.
 
@@ -158,5 +163,6 @@ Requieren autorización explícita:
 | `docs/work/<slug>/HANDOFF.md` | estado real y siguiente acción |
 | `docs/README.md` | mapa de la documentación |
 | `CHANGELOG.md` | qué se hizo |
+| `BACKLOG.md` | deuda y riesgos aceptados (opcional) |
 
 Este archivo no registra estado. No agregar fechas de progreso, hashes ni pendientes.

@@ -32,6 +32,7 @@ escribe.
 | `work/<slug>/PLAN.md` | Estable por slug | cuando cambia el alcance |
 | `work/<slug>/HANDOFF.md` | Estado | cada sesión |
 | `CHANGELOG.md` | Histórico | al publicar o cerrar |
+| `BACKLOG.md` | Deuda diferida | al abrir o cerrar un ítem |
 | `archive/` | Congelado | nunca |
 | `requirements/` | Transitorio | mientras el feature está abierto |
 | `knowledge/` | Memoria durable | cuando aparece una lección reutilizable |
@@ -39,6 +40,17 @@ escribe.
 
 Los documentos evergreen no llevan estado, fechas de progreso, hashes ni pendientes. El estado vive
 en el handoff, lo histórico en `CHANGELOG.md` y lo cerrado en `archive/`.
+
+## Ciclo de vida y enlaces
+
+Un documento evergreen describe reglas, estructura o decisiones estables. Puede enlazar, pero solo a
+rutas estables (`README.md`, `docs/README.md`, `plans/`, `guides/`). No enlaza a `work/<slug>/` ni a
+`archive/` con rutas concretas: esas rutas viven solo en este mapa. Si un slug se archiva, se
+actualiza una fila y ningún documento estable queda roto.
+
+La deuda que sobrevive a un slug no se archiva con él: se registra en `BACKLOG.md`, en la raíz, con
+responsable, fecha de revisión y criterio de cierre. Al cerrarse, se registra en `CHANGELOG.md` y se
+retira del backlog.
 
 ## Reglas
 
