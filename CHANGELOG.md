@@ -16,4 +16,8 @@ en el handoff del slug activo y lo histórico en este archivo.
 ### Changed
 
 - `AGENTS.md` agrega la regla de enlaces estables y el destino de la deuda que sobrevive a un slug.
+- `AGENTS.md` documenta el cierre del slug, la siguiente acción con dueño `[manual]`/`[agente]` y los
+  límites de `PLAN.md` y `HANDOFF.md`.
+- `ADOPTING.md` agrega la guía para migrar un repositorio existente.
+- Las plantillas de PLAN y HANDOFF reflejan los límites y el dueño de la siguiente acción.
 - `README.md` y `ADOPTING.md` documentan el backlog opcional y su verificación.

@@ -76,19 +76,38 @@ Cada README explica cuándo usarlo y cómo borrarlo. El núcleo no depende de el
 - Crea el primer work slug real con `docs/templates/PLAN.md` y `docs/templates/HANDOFF.md`.
 - Si usas requirements, copia `docs/templates/REQ.md` a `docs/requirements/`.
 
-## 7. Verificar antes del primer commit
+## 7. Migrar un repositorio existente
+
+No copies la plantilla completa. Adapta lo que falta y conserva lo específico del proyecto.
+
+1. Lee `AGENTS.md`, `docs/README.md` y el handoff activo del repositorio.
+2. Saca el estado de `AGENTS.md`: debe vivir en el handoff del slug.
+3. Reemplaza los enlaces a `work/<slug>/` por referencias al mapa; las rutas concretas viven solo en
+   `docs/README.md`.
+4. Agrega las reglas de interacción y flujo que falten: Question tool, arranque de sesión, worktrees,
+   verificación por entorno, cierre de slug, siguiente acción con dueño y límites de tamaño.
+5. Conserva las secciones específicas: stack, comandos, privacidad, contratos y reglas de negocio.
+6. Crea un slug corto con `PLAN.md` y `HANDOFF.md` que registre la migración y su verificación.
+7. Verifica enlaces, tablas, límites de líneas y `git diff --check`; publica solo con autorización.
+
+Una migración por repositorio y por sesión. No mezcles varios repos en un mismo slug.
+
+## 8. Verificar antes del primer commit
 
 - [ ] No quedan placeholders sin reemplazar.
 - [ ] Los enlaces relativos resuelven.
 - [ ] Las tablas Markdown son consistentes.
 - [ ] No hay datos personales, secretos ni rutas absolutas.
 - [ ] `AGENTS.md` es la única fuente de instrucciones.
+- [ ] `AGENTS.md` no contiene estado; vive en el handoff del slug.
 - [ ] Los documentos evergreen no enlazan rutas concretas de `work/<slug>/` ni `archive/`.
+- [ ] `PLAN.md` ≤300 líneas y `HANDOFF.md` ≤175.
+- [ ] La siguiente acción del handoff separa `[manual: usuario]` y `[agente]`.
 - [ ] `BACKLOG.md` está borrado o sin placeholders ni filas de ejemplo.
 - [ ] La identidad local está configurada y la global no cambió.
 - [ ] El repositorio no tiene remotos heredados.
 
-## 8. Primer commit y publicación
+## 9. Primer commit y publicación
 
 ```bash
 git add .
@@ -98,7 +117,7 @@ git commit -m "docs(project): adaptar plantilla"
 Publica solo con autorización explícita. Si el repositorio será una plantilla, audítalo y marca la
 opción de template después, no antes.
 
-## 9. Mantenimiento
+## 10. Mantenimiento
 
 - La plantilla no se sincroniza automáticamente.
 - Las mejoras se aplican manualmente a cada repositorio.

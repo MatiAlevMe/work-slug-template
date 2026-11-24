@@ -1,5 +1,7 @@
 # PLAN — <SLUG>
 
+> Máximo ~300 líneas. Si no cabe, el trabajo son dos slugs.
+
 **Slug:** `<SLUG>` · **Actualizado:** `<DATE>`
 **Repos objetivo:** `<REPO_URL>` · **Rama/base:** `<BRANCH>`
 

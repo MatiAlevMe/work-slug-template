@@ -54,7 +54,9 @@ Dejar la búsqueda por texto lista para revisión y documentar la siguiente unid
 
 ## Siguiente acción
 
-Decidir si se resalta la coincidencia en el título y, si se aprueba, implementarlo.
+`[manual: usuario]` — ninguna; es un ejemplo.
+
+`[agente]` — decidir si se resalta la coincidencia en el título y, si se aprueba, implementarlo.
 
 ## Criterios de aceptación pendientes
 

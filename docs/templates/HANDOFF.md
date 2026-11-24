@@ -1,5 +1,7 @@
 # HANDOFF — <SLUG>
 
+> Máximo ~175 líneas. No es bitácora: el detalle vive en `PLAN.md` o en las guías del slug.
+
 **Slug:** `<SLUG>` · **Actualizado:** `<DATE>` · **Sesión:** ...
 **Rama / base:** `<BRANCH>` · **Repos:** ...
 
@@ -47,7 +49,10 @@
 
 ## Siguiente acción
 
-`<NEXT_ACTION>`
+`[manual: usuario]` — pasos, pantalla y evidencia que debe dejar. Si no hay acción manual, escribir
+«ninguna».
+
+`[agente]` — una sola acción ejecutable.
 
 ## Criterios de aceptación pendientes
 
@@ -56,6 +61,7 @@
 ## Prompt de continuación
 
 ```text
+Antes de actuar, pregunta si la acción manual de «Siguiente acción» ya se hizo; si no, detente.
 ...
 ```
 

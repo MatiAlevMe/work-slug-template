@@ -29,8 +29,8 @@ escribe.
 | `guides/` | Vivo | cuando cambia el procedimiento |
 | `domains/` | Vivo | en el mismo commit que el cambio |
 | `plans/` | Estable/aprobado | solo con autorización |
-| `work/<slug>/PLAN.md` | Estable por slug | cuando cambia el alcance |
-| `work/<slug>/HANDOFF.md` | Estado | cada sesión |
+| `work/<slug>/PLAN.md` | Estable por slug (≤300 líneas) | cuando cambia el alcance |
+| `work/<slug>/HANDOFF.md` | Estado (≤175 líneas) | cada sesión |
 | `CHANGELOG.md` | Histórico | al publicar o cerrar |
 | `BACKLOG.md` | Deuda diferida | al abrir o cerrar un ítem |
 | `archive/` | Congelado | nunca |
@@ -56,7 +56,8 @@ retira del backlog.
 
 1. **Nada nuevo en la raíz de `docs/`.** Solo `README.md`, `PROJECT_CONTEXT.md` y `ROADMAP.md`.
 2. **Un slug activo por sesión.** Cada slug tiene `PLAN.md` y `HANDOFF.md`; al cerrarse se mueve a
-   `archive/`.
+   `archive/`, se registra en `CHANGELOG.md` y se actualiza este mapa. Los pendientes se absorben en el
+   slug correspondiente o en `BACKLOG.md`.
 3. **Las especificaciones aprobadas viven en `plans/`.** No se reescriben sin autorización.
 4. **`archive/` se congela.** No se actualizan sus enlaces internos.
 5. **Slugs ASCII.**

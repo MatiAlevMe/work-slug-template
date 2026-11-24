@@ -74,6 +74,8 @@ Reglas:
    `archive/` viven solo en `docs/README.md`; un evergreen no las repite.
 10. La deuda que sobrevive a un slug se registra en `BACKLOG.md` con responsable, fecha de revisión y
     criterio de cierre.
+11. **Tamaño acotado.** `PLAN.md` ≤300 líneas y `HANDOFF.md` ≤175; si no cabe, el trabajo son dos
+    slugs.
 
 El detalle está en `docs/README.md`.
 
@@ -97,8 +99,14 @@ build; respetar el modo declarado.
    referencia del mismo entorno. Si hace falta un entorno que no está disponible, se registra como
    pendiente manual con su alcance y no se marca como hecho.
 4. **Handoff:** reescribir `HANDOFF.md` con estado, verificación real, siguiente acción única y prompt
-   de continuación. La siguiente acción es una unidad ejecutable, no una fecha: las obligaciones con
-   fecha viven en «Deudas con fecha». El prompt referencia el handoff y no duplica su estado.
+   de continuación. La siguiente acción va en dos líneas con dueño: `[manual: usuario]` —pasos y
+   evidencia— y `[agente]`; si no hay manual, se escribe «ninguna». El prompt ordena preguntar si la
+   acción manual ya se hizo antes de continuar. La siguiente acción es una unidad ejecutable, no una
+   fecha: las obligaciones con fecha viven en «Deudas con fecha». El prompt referencia el handoff y no
+   duplica su estado.
+5. **Cerrar:** mover `docs/work/<slug>/` a `docs/archive/`, absorber los pendientes en el slug
+   correspondiente o en `BACKLOG.md`, registrar el cierre en `CHANGELOG.md` y actualizar
+   `docs/README.md`.
 
 Una sesión trabaja sobre un solo slug activo. Si la tarea toca otro slug o repositorio, declarar el
 slug primario y registrar el resto como dependencia o bloqueo; no mantener dos handoffs en paralelo.
