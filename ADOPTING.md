@@ -16,10 +16,20 @@ No cambies la configuración global de Git. En el repositorio nuevo:
 
 ```bash
 git config --local user.name "<GIT_USER_NAME>"
-git config --local user.email "<GIT_USER_EMAIL>"
+git config --local user.email "<GITHUB_NOREPLY>"
 git config --local --get user.name
 git config --local --get user.email
 ```
+
+Política de identidad:
+
+- **Repos públicos:** commits con `<GITHUB_NOREPLY>`. No commitear el email personal ni un `.mailmap`
+  con emails personales.
+- **Repos privados:** `<GITHUB_NOREPLY>` por defecto; el email personal solo si el proyecto lo necesita
+  y el repositorio seguirá privado.
+- Verificar `git config --local --get user.email` antes del primer commit.
+- Antes de cambiar un repositorio de privado a público, revisar autores, committers y blobs del
+  historial. Un repositorio privado no es control de acceso: Git conserva lo que se publicó.
 
 ## 3. Reemplazar placeholders
 
@@ -37,7 +47,7 @@ git config --local --get user.email
 | `<BUILD_COMMAND>` | Comando para build o empaquetado. |
 | `<SENSITIVE_DATA>` | Datos que el proyecto no debe publicar. |
 | `<GIT_USER_NAME>` | Nombre para los commits locales. |
-| `<GIT_USER_EMAIL>` | Email o noreply para los commits locales. |
+| `<GITHUB_NOREPLY>` | Noreply de GitHub con forma `id+usuario@users.noreply.github.com`; obligatorio en repos públicos. |
 | `<SLUG>` | Identificador ASCII del work slug. |
 | `<DATE>` | Fecha de la sesión o del documento. |
 | `<BRANCH>` | Rama de trabajo. |
@@ -104,7 +114,10 @@ Una migración por repositorio y por sesión. No mezcles varios repos en un mism
 - [ ] `PLAN.md` ≤300 líneas y `HANDOFF.md` ≤175.
 - [ ] La siguiente acción del handoff separa `[manual: usuario]` y `[agente]`.
 - [ ] `BACKLOG.md` está borrado o sin placeholders ni filas de ejemplo.
-- [ ] La identidad local está configurada y la global no cambió.
+- [ ] La identidad local está configurada con `<GITHUB_NOREPLY>` y la global no cambió.
+- [ ] Los archivos actuales no contienen el email personal; `LICENSE` solo lleva el titular, sin email.
+- [ ] No hay `.mailmap` con emails personales en un repositorio público.
+- [ ] Si el repositorio era privado y se hizo público, se revisó el historial.
 - [ ] El repositorio no tiene remotos heredados.
 
 ## 9. Primer commit y publicación

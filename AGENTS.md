@@ -100,10 +100,11 @@ build; respetar el modo declarado.
    pendiente manual con su alcance y no se marca como hecho.
 4. **Handoff:** reescribir `HANDOFF.md` con estado, verificación real, siguiente acción única y prompt
    de continuación. La siguiente acción va en dos líneas con dueño: `[manual: usuario]` —pasos y
-   evidencia— y `[agente]`; si no hay manual, se escribe «ninguna». El prompt ordena preguntar si la
-   acción manual ya se hizo antes de continuar. La siguiente acción es una unidad ejecutable, no una
-   fecha: las obligaciones con fecha viven en «Deudas con fecha». El prompt referencia el handoff y no
-   duplica su estado.
+   evidencia— y `[agente]`; si no hay manual, se escribe «ninguna». El prompt declara en una línea la
+   acción manual y en otra la de agente, después de las lecturas, y ordena confirmar la manual antes de
+   ejecutar; si el prompt y el handoff discrepan, manda el handoff. La siguiente acción es una unidad
+   ejecutable, no una fecha: las obligaciones con fecha viven en «Deudas con fecha». El prompt
+   referencia el handoff y no duplica su estado.
 5. **Cerrar:** mover `docs/work/<slug>/` a `docs/archive/`, absorber los pendientes en el slug
    correspondiente o en `BACKLOG.md`, registrar el cierre en `CHANGELOG.md` y actualizar
    `docs/README.md`.
@@ -137,6 +138,8 @@ handoff.
   directorio.
 - Commits: `tipo(scope): descripción` en español, atómicos.
 - Identidad local: configurar `user.name` y `user.email` en el repositorio; no cambiar la global.
+  Públicos con `<GITHUB_NOREPLY>`; privados con `<GITHUB_NOREPLY>` por defecto y email personal solo si
+  se necesita. Verificar con `git config --local --get user.email`.
 - Push: solo con aprobación explícita.
 - Historial: no reescribir, hacer force-push ni cambiar la identidad sin backup verificado y
   autorización explícita.
@@ -147,6 +150,10 @@ handoff.
 - `<SENSITIVE_DATA>` no se commitea, no se pega en issues ni se publica.
 - Un repositorio privado no es control de acceso: si se publica, es legible.
 - Git conserva historial aunque un archivo se elimine del árbol actual.
+- No commitear `.mailmap` con emails personales en repos públicos.
+- Antes de cambiar un repositorio de privado a público, revisar autores, committers y blobs del
+  historial.
+- `LICENSE` puede llevar el titular; no se agrega email.
 - Si una alerta o riesgo no se puede cerrar, se documenta con responsable, fecha de revisión y
   límite operativo; no se extiende por omisión.
 

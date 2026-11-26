@@ -61,8 +61,10 @@
 ## Prompt de continuación
 
 ```text
-Antes de actuar, pregunta si la acción manual de «Siguiente acción» ya se hizo; si no, detente.
-...
+Lee `AGENTS.md`, `docs/README.md` y el handoff del slug activo.
+Acción manual: <pasos o «ninguna»>.
+Acción de agente: <una sola acción>.
+Si el prompt y el handoff discrepan, manda el handoff. Confirma la acción manual antes de ejecutar.
 ```
 
 ## Referencias
